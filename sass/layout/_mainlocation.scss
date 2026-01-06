@@ -1,0 +1,155 @@
+.page-location {
+  .main {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 32px 18px;
+    background: $black;
+    color: $white;
+    margin-top: 0;
+    gap: 24px;
+    display: flex;
+
+
+    .hero__title {
+      font-family: $primary-font;
+      font-weight: 900;
+      font-size: 45px;
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin: 0 0 8px 0;
+      color: $white;
+     
+    }
+
+    h2 {
+      color: $gold;
+      font-family: $primary-font;
+      font-size: 36px;
+      margin-top: 15px;
+    }
+
+    .hero__direction span {
+      display: block;
+      color: $white;
+      opacity: 0.95;
+      margin-top: 15px;
+      font-size: 26px;
+    }
+
+    .hero__desc {
+      color: $white;
+      font-size: 18px;
+      max-width: 360px;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+  }
+}
+
+
+@media (min-width: $bp-tablet) {
+
+  .page-location {
+    .main {
+      background-color: #151515;
+      color: #ffffff;
+      padding: 3rem 2rem;
+      align-items: start;
+    }
+    .main div {
+      display: grid;
+      grid-template-columns: 1fr, 2fr;
+      gap: 4rem;
+    }
+
+    .hero__title {
+      grid-column: 1;
+      font-size: 3rem;
+      grid-template-rows: auto auto;
+      margin-bottom: 0;
+    }
+
+    .hero__divider {
+      grid-column: 2;
+    }
+    .hero__divider h2 {
+      font-size: 2.5rem;
+      color: #d87d4a;
+      margin-bottom: 1rem;
+    }
+
+    .hero__direction span {
+      display: block;
+      line-height: 1.5; 
+    }
+
+
+    .hero__desc {
+      margin-top: 1.5rem;
+      line-height: 1.6; 
+    }
+  }
+}
+
+
+@media (min-width: $bp-desktop) {
+  .page-location 
+    .main {
+      background-color: $black;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 80px 0;
+  
+      & > div {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; 
+        gap: 80px;
+        width: 100%;
+        max-width: 1110px;
+        margin: 0 auto;
+      }
+    }
+
+    .hero {
+      &__title {
+        font-size: 4.5rem;
+        line-height: 0.9;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $white;
+      }
+
+      &__divider {
+        h2 {
+          color: $gold;
+          text-transform: uppercase;
+          font-size: 2.2rem;
+          margin-top: 0;
+  
+        }
+      }
+
+      &__direction {
+    
+        span {
+          display: block;
+          font-size: 1.2rem;
+          line-height: 1.6;
+        }
+      }
+
+      &__desc {
+        color: $gray;
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+    } 
+  }

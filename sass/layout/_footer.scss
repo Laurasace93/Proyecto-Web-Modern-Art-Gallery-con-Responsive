@@ -1,0 +1,123 @@
+
+.footer {
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+
+  background: $black;
+  color: $white;
+  padding: 48px 18px;
+  margin-top: 24px;
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin: 0 0 24px 0;
+    color: $white;
+  }
+
+  &__desc {
+    font-family: $secundary-font;
+    font-size: 18px;
+    line-height: 1.8;
+    color: $white;
+    max-width: 640px;
+    margin: 0 0 28px 0;
+  }
+
+
+  &__socials {
+    display: flex;
+    gap: 32px;
+
+    .social img {
+      width: 30px;
+      height: auto;
+      display: block;
+      filter: none;
+    }
+  }
+
+}
+
+  @media (min-width: $bp-tablet) {
+    .footer__inner { 
+      padding: 20px 60px; 
+      width: 100%;
+      max-width: none;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .footer__title {
+      justify-self: start;
+      align-self: center;
+      text-align: left;
+    }
+
+    .footer__desc {
+      justify-self: center;
+      align-self: center;
+      max-width: 640px;
+      text-align: center;
+    }
+
+    .footer__socials {
+      justify-self: end;
+      align-self: center;
+      text-align: right;
+    }
+
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    .footer__inner{
+      padding: 20px 80px; 
+      width: 100%;
+      max-width: none;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .footer__title {
+      font-size: 60px;
+      justify-self: start;
+      align-self: center;
+      text-align: left;
+    }
+
+    .footer__desc {
+      font-size: 20px;
+      justify-self: center;
+      align-self: center;
+      max-width: 640px;
+      text-align: center;
+    }
+    .footer__socials {
+      justify-self: end;
+      align-self: center;
+      text-align: right;
+    }
+
+}
